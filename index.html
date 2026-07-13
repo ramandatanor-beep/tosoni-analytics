@@ -14,7 +14,6 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);display:flex;min-height:100vh;font-size:14px}
-
 .sidebar{width:var(--sidebar-w);background:#0F2419;display:flex;flex-direction:column;position:fixed;top:0;left:0;height:100vh;z-index:100}
 .sidebar-logo{padding:22px 20px 14px;border-bottom:1px solid rgba(255,255,255,.08)}
 .sidebar-logo h1{color:var(--green);font-size:15px;font-weight:700;line-height:1.2}
@@ -24,15 +23,13 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
 .nav-item:hover{color:#fff;background:rgba(255,255,255,.05)}
 .nav-item.active{color:var(--green);background:rgba(45,198,83,.08);border-left-color:var(--green)}
 .nav-icon{font-size:15px;width:18px;text-align:center;flex-shrink:0}
-.sidebar-foot{padding:12px 20px;border-top:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.25);font-size:11px;line-height:1.5}
-.sync-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#555;margin-right:5px;vertical-align:middle}
+.sidebar-foot{padding:12px 20px;border-top:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.25);font-size:11px;line-height:1.6}
+.sync-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#555;margin-right:5px;vertical-align:middle}
 .sync-dot.ok{background:var(--green)}
 .sync-dot.err{background:var(--red)}
 .sync-dot.loading{background:#F59E0B;animation:pulse 1s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-
 .main{margin-left:var(--sidebar-w);flex:1;display:flex;flex-direction:column;min-height:100vh}
-
 .datebar{background:#fff;border-bottom:1px solid var(--border);padding:0 24px;height:50px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:50}
 .datebar label{font-size:11px;font-weight:600;color:var(--text-2);text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
 .datebar input[type=date]{border:1px solid var(--border);border-radius:6px;padding:4px 8px;font-size:12px;color:var(--text);outline:none;background:#fff}
@@ -44,22 +41,15 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
 .btn-oggi{border-color:var(--green);color:var(--green-d);background:var(--green-l)}
 .btn-inizi{border-color:var(--violet);color:var(--violet);background:var(--violet-l)}
 .badge-count{background:var(--green-l);color:var(--green-d);font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;white-space:nowrap}
-
 .content{padding:22px 26px;flex:1}
 .page{display:none}.page.active{display:block}
-
-/* LOADING OVERLAY */
-.loader{display:none;position:fixed;inset:0;background:rgba(15,36,25,.7);z-index:999;align-items:center;justify-content:center;flex-direction:column;gap:14px}
+.loader{display:none;position:fixed;inset:0;background:rgba(15,36,25,.75);z-index:999;align-items:center;justify-content:center;flex-direction:column;gap:14px}
 .loader.show{display:flex}
-.spinner{width:40px;height:40px;border:3px solid rgba(45,198,83,.3);border-top-color:var(--green);border-radius:50%;animation:spin .8s linear infinite}
+.spinner{width:42px;height:42px;border:3px solid rgba(45,198,83,.3);border-top-color:var(--green);border-radius:50%;animation:spin .8s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 .loader p{color:#fff;font-size:14px;font-weight:500}
-
-/* ERROR BANNER */
 .err-banner{display:none;background:#FEE2E2;border:1px solid #FECACA;border-radius:var(--radius);padding:12px 16px;margin-bottom:16px;color:#B91C1C;font-size:13px}
 .err-banner.show{display:block}
-
-/* KPI */
 .kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px}
 .kpi{background:#fff;border-radius:var(--radius);padding:18px 20px;border:1px solid var(--border);box-shadow:var(--shadow)}
 .kpi-label{font-size:10px;font-weight:700;color:var(--text-2);text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px}
@@ -68,7 +58,6 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
 .kpi-green .kpi-value{color:var(--green-d)}
 .kpi-red .kpi-value{color:var(--red)}
 .kpi-violet .kpi-value{color:var(--violet)}
-
 .seg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px}
 .seg{background:#fff;border-radius:var(--radius);padding:16px 18px;border:1px solid var(--border);box-shadow:var(--shadow);border-top:3px solid}
 .seg-champions{border-top-color:var(--green)}
@@ -77,12 +66,10 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
 .seg-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--text-2);margin-bottom:6px}
 .seg-num{font-size:30px;font-weight:800;line-height:1}
 .seg-desc{font-size:11px;color:var(--text-2);margin-top:3px}
-
 .card{background:#fff;border-radius:var(--radius);border:1px solid var(--border);box-shadow:var(--shadow);overflow:hidden;margin-bottom:18px}
-.card-head{padding:12px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px}
+.card-head{padding:12px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .card-head h3{font-size:13px;font-weight:600}
-.card-actions{margin-left:auto;display:flex;gap:8px;align-items:center}
-
+.card-actions{margin-left:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .sort-wrap{padding:10px 18px;border-bottom:1px solid var(--border);background:var(--bg)}
 .sort-group{margin-bottom:6px;display:flex;align-items:flex-start;gap:8px}
 .sort-group:last-child{margin-bottom:0}
@@ -93,12 +80,10 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(
 .pill.p-single.on{background:#FFF3E0;border-color:#F59E0B;color:#92400E}
 .pill.p-pair.on{background:var(--green-l);border-color:var(--green-d);color:var(--green-d)}
 .pill.p-triple.on{background:var(--violet-l);border-color:var(--violet);color:var(--violet)}
-
 .search-bar{padding:8px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
 .search-bar input{flex:1;border:1px solid var(--border);border-radius:6px;padding:4px 10px;font-size:12px;outline:none;color:var(--text)}
 .search-bar input:focus{border-color:var(--green);box-shadow:0 0 0 2px rgba(45,198,83,.15)}
 .info-bar{padding:4px 18px;font-size:11px;color:var(--text-2);border-bottom:1px solid var(--border);background:var(--green-xl);min-height:22px}
-
 .tbl-wrap{overflow:auto;max-height:460px}
 table{width:100%;border-collapse:collapse;font-size:12px}
 th{position:sticky;top:0;background:#F9FAFB;border-bottom:1px solid var(--border);padding:6px 10px;text-align:left;font-weight:600;white-space:nowrap;color:var(--text-2);font-size:11px;text-transform:uppercase;letter-spacing:.04em}
@@ -115,13 +100,27 @@ tr:hover td{background:#F9FDF9}
 .tag-v{background:var(--green-l);color:var(--green-d)}
 .tag-r{background:#FEE2E2;color:#B91C1C}
 .tag-n{background:#F3F4F6;color:#6B7280}
+.tag-anon{background:#FFF3E0;color:#92400E}
 .btn-reset{padding:4px 10px;border-radius:6px;border:1px solid var(--border);background:#fff;font-size:11px;color:var(--text-2);cursor:pointer;font-weight:500}
 .btn-reset:hover{border-color:var(--red);color:var(--red)}
+.toggle-wrap{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--text-2);cursor:pointer;user-select:none}
+.toggle{position:relative;width:34px;height:18px;flex-shrink:0}
+.toggle input{opacity:0;width:0;height:0;position:absolute}
+.toggle-slider{position:absolute;inset:0;background:#D1D5DB;border-radius:20px;transition:.2s}
+.toggle-slider:before{content:'';position:absolute;width:14px;height:14px;left:2px;top:2px;background:#fff;border-radius:50%;transition:.2s}
+.toggle input:checked + .toggle-slider{background:var(--green)}
+.toggle input:checked + .toggle-slider:before{transform:translateX(16px)}
+.celle-bar{background:#fff;border-radius:var(--radius);border:1px solid var(--border);padding:14px 18px;margin-bottom:18px;display:flex;align-items:center;gap:16px}
+.celle-label{font-size:11px;font-weight:700;color:var(--text-2);text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
+.celle-track{flex:1;height:8px;background:#E5EBE7;border-radius:4px;overflow:hidden}
+.celle-fill{height:100%;background:var(--green);border-radius:4px;transition:width .5s}
+.celle-pct{font-size:12px;font-weight:700;color:var(--green-d);white-space:nowrap}
+.celle-detail{font-size:11px;color:var(--text-2);white-space:nowrap}
 </style>
 </head>
 <body>
 
-<div class="loader" id="loader"><div class="spinner"></div><p id="loader-msg">Caricamento dati...</p></div>
+<div class="loader" id="loader"><div class="spinner"></div><p id="loader-msg">Connessione a Google Sheets...</p></div>
 
 <nav class="sidebar">
   <div class="sidebar-logo">
@@ -129,19 +128,13 @@ tr:hover td{background:#F9FDF9}
     <p>Analytics · v2.0</p>
   </div>
   <div class="nav">
-    <div class="nav-item active" onclick="go('dashboard')" id="nav-dashboard">
-      <span class="nav-icon">◈</span> Dashboard
-    </div>
-    <div class="nav-item" onclick="go('rfm')" id="nav-rfm">
-      <span class="nav-icon">◉</span> Analisi RFM
-    </div>
-    <div class="nav-item" onclick="go('scontrini')" id="nav-scontrini">
-      <span class="nav-icon">◇</span> Scontrini
-    </div>
+    <div class="nav-item active" onclick="go('dashboard')" id="nav-dashboard"><span class="nav-icon">◈</span> Dashboard</div>
+    <div class="nav-item" onclick="go('rfm')" id="nav-rfm"><span class="nav-icon">◉</span> Analisi RFM</div>
+    <div class="nav-item" onclick="go('scontrini')" id="nav-scontrini"><span class="nav-icon">◇</span> Scontrini</div>
   </div>
   <div class="sidebar-foot">
     <div><span class="sync-dot" id="sync-dot"></span><span id="sync-label">Connessione...</span></div>
-    <div id="sync-time" style="margin-top:4px;padding-left:11px"></div>
+    <div id="sync-time" style="margin-top:3px;padding-left:12px"></div>
   </div>
 </nav>
 
@@ -156,15 +149,20 @@ tr:hover td{background:#F9FDF9}
       <button class="btn-date btn-inizi" onclick="setInizi()">⏮ Agli inizi</button>
       <button class="btn-date btn-oggi" onclick="setOggi()">⬤ Oggi</button>
       <button class="btn-date" onclick="setAll()">Tutto</button>
-      <span class="badge-count" id="global-count">— clienti</span>
+      <span class="badge-count" id="global-count">—</span>
     </div>
   </div>
 
   <div class="content">
     <div class="err-banner" id="err-banner"></div>
 
-    <!-- DASHBOARD -->
     <div class="page active" id="page-dashboard">
+      <div class="celle-bar">
+        <span class="celle-label">🗄 Spazio Sheets</span>
+        <div class="celle-track"><div class="celle-fill" id="celle-fill" style="width:0%"></div></div>
+        <span class="celle-pct" id="celle-pct">—%</span>
+        <span class="celle-detail" id="celle-detail">— / 10.000.000 celle</span>
+      </div>
       <div class="kpi-grid">
         <div class="kpi kpi-green">
           <div class="kpi-label">Clienti nel periodo</div>
@@ -177,9 +175,9 @@ tr:hover td{background:#F9FDF9}
           <div class="kpi-sub">somma monetizzazione</div>
         </div>
         <div class="kpi kpi-violet">
-          <div class="kpi-label">Acquisti medi</div>
+          <div class="kpi-label">Scontrini medi</div>
           <div class="kpi-value" id="kpi-freq">—</div>
-          <div class="kpi-sub">scontrini per cliente</div>
+          <div class="kpi-sub">per cliente nel periodo</div>
         </div>
         <div class="kpi kpi-red">
           <div class="kpi-label">Score RFM medio</div>
@@ -210,12 +208,15 @@ tr:hover td{background:#F9FDF9}
       </div>
     </div>
 
-    <!-- RFM -->
     <div class="page" id="page-rfm">
       <div class="card">
         <div class="card-head">
           <h3>Analisi RFM</h3>
           <div class="card-actions">
+            <label class="toggle-wrap">
+              <span>Mostra anonimi</span>
+              <div class="toggle"><input type="checkbox" id="toggle-anon" checked onchange="renderRFM()"><div class="toggle-slider"></div></div>
+            </label>
             <button class="btn-reset" onclick="resetRFMSort()">× Reset ordine</button>
           </div>
         </div>
@@ -232,12 +233,16 @@ tr:hover td{background:#F9FDF9}
       </div>
     </div>
 
-    <!-- SCONTRINI -->
     <div class="page" id="page-scontrini">
       <div class="card">
-        <div class="card-head"><h3>Scontrini</h3></div>
+        <div class="card-head">
+          <h3>Scontrini</h3>
+          <div class="card-actions">
+            <button class="btn-reset" onclick="downloadScontrini()">⬇ Scarica Excel</button>
+          </div>
+        </div>
         <div class="search-bar">
-          <input type="text" id="scontrini-search" placeholder="Cerca descrizione, cassiere, codice cliente..." oninput="renderScontrini()">
+          <input type="text" id="scontrini-search" placeholder="Cerca descrizione, codice cliente, cassiere..." oninput="renderScontrini()">
         </div>
         <div class="info-bar" id="scontrini-info"></div>
         <div class="tbl-wrap"><table id="scontrini-tbl"></table></div>
@@ -246,218 +251,230 @@ tr:hover td{background:#F9FDF9}
   </div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script>
-// ═══════════════════════════════════════════════════════════════
-// CONFIG — unico punto da modificare
-// ═══════════════════════════════════════════════════════════════
 const SHEET_ID      = '1P8OFdsj-05Yrq_X0rElKsKTD4hbKouK7i1mUWjZr6NM';
-const SHEET_RFM     = 'rfm_calcolato';       // tab nel Google Sheet
-const SHEET_STORICO = 'storico_vendite';   // tab nel Google Sheet
-const API_BASE      = `https://docs.google.com/spreadsheets/d/$1P8OFdsj-05Yrq_X0rElKsKTD4hbKouK7i1mUWjZr6NM/gviz/tq?tqx=out:json&sheet=`;
+const SHEET_VECCHIO = 'storico_vecchio';
+const SHEET_NUOVO   = 'storico_nuovo';
+const API_BASE      = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=`;
 
-// ═══════════════════════════════════════════════════════════════
-// STATO GLOBALE
-// ═══════════════════════════════════════════════════════════════
-let RFM_DATA      = [];   // {cod, data, rec, freq, mon, R, F, M}
-let STORICO_DATA  = [];   // array di oggetti con i campi dello scontrino
-let DB_OLDEST     = '2023-07-01';
-const TODAY_STR   = new Date().toISOString().slice(0,10);
-let filterFrom    = DB_OLDEST;
-let filterTo      = TODAY_STR;
-let rfmInited     = false;
-let rfmSortKey    = null, rfmSortSet = null;
-let allSorts;
+let SCONTRINI   = [];
+let RFM_DATA    = [];
+let DB_OLDEST   = '2023-07-01';
+const TODAY_STR = new Date().toISOString().slice(0,10);
+let filterFrom  = DB_OLDEST;
+let filterTo    = TODAY_STR;
+let rfmInited   = false;
+let rfmSortKey  = null, rfmSortSet = null, allSorts;
+let scontriniCache = [];
 
-// ═══════════════════════════════════════════════════════════════
-// FETCH DA GOOGLE SHEETS
-// ═══════════════════════════════════════════════════════════════
-function setSyncStatus(state, msg) {
-  const dot   = document.getElementById('sync-dot');
-  const label = document.getElementById('sync-label');
-  dot.className = 'sync-dot ' + (state==='ok'?'ok':state==='err'?'err':'loading');
-  label.textContent = msg;
-}
-
-async function fetchSheet(tabName) {
-  const url = API_BASE + encodeURIComponent(tabName);
-  const res = await fetch(url);
-  if(!res.ok) throw new Error(`HTTP ${res.status} su foglio "${tabName}"`);
+async function fetchSheet(tab) {
+  const url  = API_BASE + encodeURIComponent(tab);
+  const res  = await fetch(url);
+  if(!res.ok) throw new Error(`HTTP ${res.status} — foglio "${tab}"`);
   const text = await res.text();
-  // Google wraps JSON in /*O_o*/google.visualization.Query.setResponse(...)
-  const json = JSON.parse(text.replace(/^[^{]+/, '').replace(/[^}]+$/, ''));
-  if(json.status === 'error') throw new Error(json.errors?.[0]?.detailed_message || 'Errore Sheets');
+  const json = JSON.parse(text.replace(/^[^{]+/,'').replace(/[^}]+$|;$/g,''));
+  if(json.status==='error') throw new Error(json.errors?.[0]?.detailed_message || 'Errore Sheets');
   return json;
 }
 
-function sheetsToRows(json) {
-  // Converte la risposta gviz in array di oggetti usando la prima riga come header
-  const cols = json.table.cols.map(c => c.label);
-  return (json.table.rows || []).map(row => {
-    const obj = {};
-    cols.forEach((col, i) => {
+function gvizRows(json) {
+  const cols = json.table.cols.map(c => c.label || c.id);
+  return (json.table.rows||[]).map(row => {
+    const obj={};
+    cols.forEach((col,i) => {
       const cell = row.c?.[i];
-      obj[col] = cell?.v ?? cell?.f ?? '';
+      let v = cell?.v ?? '';
+      if(typeof v === 'string' && v.startsWith('Date(')) {
+        const m = v.match(/Date\((\d+),(\d+),(\d+)/);
+        if(m) v = `${m[1]}-${String(+m[2]+1).padStart(2,'0')}-${String(m[3]).padStart(2,'0')}`;
+      }
+      if(v instanceof Date) v = v.toISOString().slice(0,10);
+      obj[col] = v;
     });
     return obj;
   });
 }
 
-function parseDate(val) {
-  // Gestisce Date JS (da gviz), stringhe ISO, stringhe DD/MM/YYYY
-  if(!val) return null;
-  if(val instanceof Date) return val.toISOString().slice(0,10);
-  const s = String(val);
-  const m1 = s.match(/^(\d{4})-(\d{2})-(\d{2})/);
-  if(m1) return `${m1[1]}-${m1[2]}-${m1[3]}`;
+function parseDate(v) {
+  if(!v) return null;
+  const s = String(v);
+  const m1 = s.match(/^(\d{4}-\d{2}-\d{2})/);
+  if(m1) return m1[1];
   const m2 = s.match(/(\d{2})\/(\d{2})\/(\d{4})/);
   if(m2) return `${m2[3]}-${m2[2]}-${m2[1]}`;
-  // gviz date string "Date(2024,6,2)" 
   const m3 = s.match(/Date\((\d+),(\d+),(\d+)/);
   if(m3) return `${m3[1]}-${String(+m3[2]+1).padStart(2,'0')}-${String(m3[3]).padStart(2,'0')}`;
   return null;
 }
 
+function normalizzaVecchio(rows) {
+  return rows.map(r => {
+    const data    = parseDate(r['DATA'] || r['data'] || '');
+    const cliente = String(r['COD. DB NAZ.'] || r['COD.DB.NAZ.'] || '').trim();
+    const totale  = parseFloat(String(r['TOT.'] || r['TOT'] || '0').replace(',','.')) || 0;
+    const desc    = String(r['DESCRIZIONE'] || '').trim();
+    const qta     = parseFloat(r['QTA'] || 1) || 1;
+    const prezzo  = parseFloat(String(r['PREZZO'] || '0').replace(',','.')) || 0;
+    const mov     = String(r['MOV.'] || r['MOV'] || '').trim();
+    return {
+      data,
+      cliente: cliente.startsWith('C') ? cliente : 'Anonimo',
+      totale: Math.abs(totale),
+      desc, qta, prezzo,
+      mov: mov === '-' ? 'Vendita' : mov === '+' ? 'Reso' : mov,
+      cassiere: String(r['CASSIERE'] || '').trim(),
+      fonte: 'vecchio'
+    };
+  }).filter(r => r.data);
+}
+
+function normalizzaNuovo(rows) {
+  return rows.map(r => {
+    const data    = parseDate(r['Data'] || r['DATA'] || '');
+    const cliente = String(r['Codice Cliente'] || '').trim();
+    const totale  = parseFloat(String(r['Totale'] || '0').replace(',','.')) || 0;
+    const desc    = String(r['Descrizione'] || '').trim();
+    const qta     = parseFloat(r['Quantità'] || 1) || 1;
+    const prezzo  = parseFloat(String(r['Prezzo di listino'] || '0').replace(',','.')) || 0;
+    const annull  = r['Annullato'];
+    return {
+      data,
+      cliente: cliente.startsWith('C') ? cliente : 'Anonimo',
+      totale: Math.abs(totale),
+      desc, qta, prezzo,
+      mov: annull == 1 ? 'Annullato' : 'Vendita',
+      cassiere: '',
+      fonte: 'nuovo'
+    };
+  }).filter(r => r.data && r.mov !== 'Annullato');
+}
+
+function calcolaRFM(scontrini) {
+  const TODAY = new Date();
+  const scontMap = {};
+  scontrini.forEach(r => {
+    const key = `${r.data}|${r.totale}|${r.cliente}`;
+    if(!scontMap[key]) scontMap[key] = { data: r.data, cliente: r.cliente, totale: r.totale };
+  });
+  const scontriniUnici = Object.values(scontMap);
+  const clientiMap = {};
+  scontriniUnici.forEach(s => {
+    if(!clientiMap[s.cliente]) clientiMap[s.cliente] = { ultimaData: '', freq: 0, mon: 0 };
+    const c = clientiMap[s.cliente];
+    c.freq++;
+    c.mon += s.totale;
+    if(!c.ultimaData || s.data > c.ultimaData) c.ultimaData = s.data;
+  });
+  const clienti = Object.entries(clientiMap).map(([cod, c]) => {
+    const gg = Math.round((TODAY - new Date(c.ultimaData)) / 86400000);
+    return { cod, data: c.ultimaData, rec: gg, freq: c.freq, mon: parseFloat(c.mon.toFixed(2)) };
+  });
+  function score(arr, inverse) {
+    const sorted = [...arr].sort((a,b) => inverse ? b-a : a-b);
+    const rank = {};
+    sorted.forEach((v,i) => { if(!(v in rank)) rank[v] = i; });
+    const n = sorted.length - 1 || 1;
+    return arr.map(v => parseFloat((1 + 9 * rank[v] / n).toFixed(1)));
+  }
+  const Rs = score(clienti.map(c=>c.rec),  true);
+  const Fs = score(clienti.map(c=>c.freq), false);
+  const Ms = score(clienti.map(c=>c.mon),  false);
+  return clienti.map((c,i) => ({...c, R: Rs[i], F: Fs[i], M: Ms[i]}));
+}
+
 async function loadAllData() {
   showLoader('Connessione a Google Sheets...');
-  setSyncStatus('loading', 'Connessione...');
+  setSyncStatus('loading','Connessione...');
   try {
-    // Load RFM
-    showLoader('Caricamento clienti RFM...');
-    const rfmJson = await fetchSheet(SHEET_RFM);
-    const rfmRows = sheetsToRows(rfmJson);
-    RFM_DATA = rfmRows.map(r => ({
-      cod:  String(r['COD_DB_NAZ'] || r['cod'] || ''),
-      data: parseDate(r['ultima_data'] || r['data'] || '') || '',
-      rec:  +r['recenza_giorni'] || +r['rec'] || 0,
-      freq: +r['frequenza']      || +r['freq'] || 0,
-      mon:  +r['monetizzazione'] || +r['mon']  || 0,
-      R:    +r['R'] || 0,
-      F:    +r['F'] || 0,
-      M:    +r['M'] || 0,
-    })).filter(r => r.cod);
-
-    // Load Storico
-    showLoader('Caricamento storico scontrini...');
-    const storicoJson = await fetchSheet(SHEET_STORICO);
-    STORICO_DATA = sheetsToRows(storicoJson);
-
-    // Compute DB_OLDEST from data
-    const dates = [...RFM_DATA.map(r=>r.data), ...STORICO_DATA.map(r=>parseDate(r['DATA']||r['data']||''))].filter(Boolean).sort();
+    showLoader('Caricamento storico vecchio...');
+    const jVec = await fetchSheet(SHEET_VECCHIO);
+    const rVec = gvizRows(jVec);
+    showLoader('Caricamento storico nuovo...');
+    const jNuo = await fetchSheet(SHEET_NUOVO);
+    const rNuo = gvizRows(jNuo);
+    const normVec = normalizzaVecchio(rVec);
+    const normNuo = normalizzaNuovo(rNuo);
+    SCONTRINI = [...normVec, ...normNuo];
+    showLoader('Calcolo RFM...');
+    RFM_DATA = calcolaRFM(SCONTRINI);
+    const dates = SCONTRINI.map(r=>r.data).filter(Boolean).sort();
     if(dates.length) DB_OLDEST = dates[0];
-
-    setSyncStatus('ok', 'Dati aggiornati');
-    document.getElementById('sync-time').textContent = 'Ultimo aggiorn: ' + new Date().toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'});
+    setSyncStatus('ok','Dati aggiornati');
+    document.getElementById('sync-time').textContent =
+      'Aggiorn: ' + new Date().toLocaleTimeString('it-IT',{hour:'2-digit',minute:'2-digit'});
+    aggiornaCelleUI(240440, 10000000);
     hideLoader();
     initDates();
     refreshAll();
   } catch(err) {
-    setSyncStatus('err', 'Errore connessione');
+    setSyncStatus('err','Errore connessione');
     hideLoader();
-    showError('Impossibile caricare i dati da Google Sheets. Controlla che il foglio sia pubblico (condiviso come "chiunque con il link può visualizzare").<br><small>' + err.message + '</small>');
+    showError('Impossibile caricare i dati da Google Sheets. Controlla che il foglio sia pubblico.<br><small>' + err.message + '</small>');
     console.error(err);
   }
 }
 
-// ═══════════════════════════════════════════════════════════════
-// UI HELPERS
-// ═══════════════════════════════════════════════════════════════
-function showLoader(msg) {
-  document.getElementById('loader').classList.add('show');
-  document.getElementById('loader-msg').textContent = msg || 'Caricamento...';
-}
-function hideLoader() { document.getElementById('loader').classList.remove('show'); }
-function showError(msg) {
-  const b = document.getElementById('err-banner');
-  b.innerHTML = '⚠️ ' + msg;
-  b.classList.add('show');
+function aggiornaCelleUI(usate, limite) {
+  const pct = (usate/limite*100);
+  document.getElementById('celle-fill').style.width   = Math.min(pct,100)+'%';
+  document.getElementById('celle-pct').textContent    = pct.toFixed(5)+'%';
+  document.getElementById('celle-detail').textContent =
+    usate.toLocaleString('it-IT') + ' / ' + limite.toLocaleString('it-IT') + ' celle';
 }
 
-// ═══════════════════════════════════════════════════════════════
-// DATE FILTER
-// ═══════════════════════════════════════════════════════════════
+function showLoader(msg) { document.getElementById('loader').classList.add('show'); document.getElementById('loader-msg').textContent = msg; }
+function hideLoader() { document.getElementById('loader').classList.remove('show'); }
+function showError(msg) { const b=document.getElementById('err-banner'); b.innerHTML='⚠️ '+msg; b.classList.add('show'); }
+function setSyncStatus(state,msg) {
+  document.getElementById('sync-dot').className='sync-dot '+(state==='ok'?'ok':state==='err'?'err':'loading');
+  document.getElementById('sync-label').textContent=msg;
+}
+
 function initDates() {
   document.getElementById('date-from').value = DB_OLDEST;
   document.getElementById('date-to').value   = TODAY_STR;
-  filterFrom = DB_OLDEST;
-  filterTo   = TODAY_STR;
-}
-function applyFilter() {
-  filterFrom = document.getElementById('date-from').value || DB_OLDEST;
-  filterTo   = document.getElementById('date-to').value   || TODAY_STR;
-  refreshAll();
-}
-function setOggi() {
-  document.getElementById('date-to').value = TODAY_STR;
-  filterTo   = TODAY_STR;
-  filterFrom = document.getElementById('date-from').value || DB_OLDEST;
-  refreshAll();
-}
-function setInizi() {
-  document.getElementById('date-from').value = DB_OLDEST;
-  filterFrom = DB_OLDEST;
-  filterTo   = document.getElementById('date-to').value || TODAY_STR;
-  refreshAll();
-}
-function setAll() {
-  document.getElementById('date-from').value = DB_OLDEST;
-  document.getElementById('date-to').value   = TODAY_STR;
   filterFrom = DB_OLDEST; filterTo = TODAY_STR;
-  refreshAll();
 }
-function inRange(dateStr) {
-  if(!dateStr) return true;
-  const iso = String(dateStr).slice(0,10);
-  return iso >= filterFrom && iso <= filterTo;
-}
+function applyFilter() { filterFrom=document.getElementById('date-from').value||DB_OLDEST; filterTo=document.getElementById('date-to').value||TODAY_STR; refreshAll(); }
+function setOggi()  { document.getElementById('date-to').value=TODAY_STR; filterTo=TODAY_STR; filterFrom=document.getElementById('date-from').value||DB_OLDEST; refreshAll(); }
+function setInizi() { document.getElementById('date-from').value=DB_OLDEST; filterFrom=DB_OLDEST; filterTo=document.getElementById('date-to').value||TODAY_STR; refreshAll(); }
+function setAll()   { document.getElementById('date-from').value=DB_OLDEST; document.getElementById('date-to').value=TODAY_STR; filterFrom=DB_OLDEST; filterTo=TODAY_STR; refreshAll(); }
+function inRange(d) { if(!d) return true; return d>=filterFrom && d<=filterTo; }
 
-// ═══════════════════════════════════════════════════════════════
-// NAVIGATION
-// ═══════════════════════════════════════════════════════════════
-let currentPage = 'dashboard';
+let currentPage='dashboard';
 function go(page) {
   document.getElementById('page-'+currentPage).classList.remove('active');
   document.getElementById('nav-'+currentPage).classList.remove('active');
-  currentPage = page;
+  currentPage=page;
   document.getElementById('page-'+page).classList.add('active');
   document.getElementById('nav-'+page).classList.add('active');
-  if(page==='rfm' && !rfmInited) { initRFMSort(); rfmInited=true; }
+  if(page==='rfm'&&!rfmInited){initRFMSort();rfmInited=true;}
   renderPage(page);
 }
-function refreshAll() {
-  renderPage(currentPage);
-  const filtered = RFM_DATA.filter(r=>inRange(r.data));
-  document.getElementById('global-count').textContent = filtered.length + ' clienti';
-}
-function renderPage(p) {
-  if(p==='dashboard') renderDashboard();
-  if(p==='rfm')       renderRFM();
-  if(p==='scontrini') renderScontrini();
-}
+function refreshAll() { renderPage(currentPage); const n=RFM_DATA.filter(r=>inRange(r.data)).length; document.getElementById('global-count').textContent=n+' clienti'; }
+function renderPage(p) { if(p==='dashboard')renderDashboard(); if(p==='rfm')renderRFM(); if(p==='scontrini')renderScontrini(); }
 
-// ═══════════════════════════════════════════════════════════════
-// DASHBOARD
-// ═══════════════════════════════════════════════════════════════
 function renderDashboard() {
-  const rows = RFM_DATA.filter(r=>inRange(r.data));
-  const n    = rows.length;
-  const fat  = rows.reduce((s,r)=>s+r.mon,0);
-  const freq = n ? rows.reduce((s,r)=>s+r.freq,0)/n : 0;
-  const ravg = n ? rows.reduce((s,r)=>s+r.R,0)/n : 0;
-  const favg = n ? rows.reduce((s,r)=>s+r.F,0)/n : 0;
-  const mavg = n ? rows.reduce((s,r)=>s+r.M,0)/n : 0;
+  const rows=RFM_DATA.filter(r=>inRange(r.data));
+  const n=rows.length;
+  const fat=rows.reduce((s,r)=>s+r.mon,0);
+  const freq=n?rows.reduce((s,r)=>s+r.freq,0)/n:0;
+  const rfmAvg=n?rows.reduce((s,r)=>s+(r.R+r.F+r.M)/3,0)/n:0;
   document.getElementById('kpi-clienti').textContent   = n.toLocaleString('it-IT');
   document.getElementById('kpi-fatturato').textContent = '€'+fat.toLocaleString('it-IT',{maximumFractionDigits:0});
   document.getElementById('kpi-freq').textContent      = freq.toFixed(1);
-  document.getElementById('kpi-rfm').textContent       = ((ravg+favg+mavg)/3).toFixed(1);
+  document.getElementById('kpi-rfm').textContent       = rfmAvg.toFixed(1);
   document.getElementById('seg-champ').textContent  = rows.filter(r=>r.R>=8&&r.F>=8&&r.M>=8).length;
   document.getElementById('seg-loyal').textContent  = rows.filter(r=>r.R>=6&&r.F>=6).length;
   document.getElementById('seg-risk').textContent   = rows.filter(r=>r.R<=3&&r.F>=7).length;
-  document.getElementById('global-count').textContent = n + ' clienti';
-  const top10 = [...rows].sort((a,b)=>b.mon-a.mon).slice(0,10);
-  document.getElementById('top10-tbl').innerHTML =
-    '<thead><tr><th>#</th><th>Cod. Cliente</th><th>Ultimo acquisto</th><th>Freq.</th><th>Spesa</th><th>R</th><th>F</th><th>M</th></tr></thead><tbody>'+
+  document.getElementById('global-count').textContent = n+' clienti';
+  const top10=[...rows].sort((a,b)=>b.mon-a.mon).slice(0,10);
+  document.getElementById('top10-tbl').innerHTML=
+    '<thead><tr><th>#</th><th>Cliente</th><th>Ultimo acquisto</th><th>Scontrini</th><th>Spesa</th><th>R</th><th>F</th><th>M</th></tr></thead><tbody>'+
     top10.map((r,i)=>`<tr>
-      <td class="row-n">${i+1}</td><td class="cod">${r.cod}</td>
+      <td class="row-n">${i+1}</td>
+      <td class="cod">${r.cod==='Anonimo'?'<span class="tag tag-anon">Anonimo</span>':r.cod}</td>
       <td>${r.data}</td><td>${r.freq}</td>
       <td class="mon">€${r.mon.toLocaleString('it-IT',{minimumFractionDigits:2})}</td>
       <td><span class="score sr">${r.R}</span></td>
@@ -466,9 +483,6 @@ function renderDashboard() {
     </tr>`).join('')+'</tbody>';
 }
 
-// ═══════════════════════════════════════════════════════════════
-// RFM SORT
-// ═══════════════════════════════════════════════════════════════
 function buildAllSorts() {
   const s=[],p=[],t=[];
   const INDS=[{n:'R',k:'R'},{n:'F',k:'F'},{n:'M',k:'M'}];
@@ -476,7 +490,7 @@ function buildAllSorts() {
     s.push({key:a.n+(d>0?'↑':'↓'),label:a.n+' '+(d>0?'↑':'↓'),cols:[a.k],ds:[d],cls:'p-single'});
   }));
   INDS.forEach((a,ai)=>INDS.forEach((b,bi)=>{
-    if(ai===bi) return;
+    if(ai===bi)return;
     [1,-1].forEach(da=>[1,-1].forEach(db=>{
       p.push({key:a.n+(da>0?'↑':'↓')+b.n+(db>0?'↑':'↓'),
         label:a.n+(da>0?'↑':'↓')+' + '+b.n+(db>0?'↑':'↓'),
@@ -495,7 +509,7 @@ function buildAllSorts() {
   return {singles:s,pairs:p,triples:t,all:[...s,...p,...t]};
 }
 function initRFMSort() {
-  allSorts = buildAllSorts();
+  allSorts=buildAllSorts();
   const mk=(id,items,cls)=>{
     document.getElementById(id).innerHTML=items.map(it=>
       `<div class="pill ${cls}" id="pill-${it.key}" onclick="setRFMSort('${it.key}')">${it.label}</div>`
@@ -517,28 +531,31 @@ function resetRFMSort() {
   rfmSortKey=null;rfmSortSet=null;renderRFM();
 }
 function renderRFM() {
-  if(!rfmInited) return;
+  if(!rfmInited)return;
   const q=(document.getElementById('rfm-search').value||'').toLowerCase();
+  const mostraAnon=document.getElementById('toggle-anon').checked;
   let rows=RFM_DATA.filter(r=>inRange(r.data));
+  if(!mostraAnon) rows=rows.filter(r=>r.cod!=='Anonimo');
   if(q) rows=rows.filter(r=>r.cod.toLowerCase().includes(q));
   if(rfmSortSet){
     rows.sort((a,b)=>{
       for(let i=0;i<rfmSortSet.cols.length;i++){
         const d=(+a[rfmSortSet.cols[i]]||0)-(+b[rfmSortSet.cols[i]]||0);
-        if(d!==0) return d*rfmSortSet.ds[i];
+        if(d!==0)return d*rfmSortSet.ds[i];
       }
       return 0;
     });
   }
   document.getElementById('rfm-info').textContent=
-    `${rows.length} clienti nel periodo · ${rfmSortSet?'Ordine: '+rfmSortSet.label:'Nessun ordinamento'}`;
+    `${rows.length} clienti · ${rfmSortSet?'Ordine: '+rfmSortSet.label:'Nessun ordinamento'}`;
   document.getElementById('rfm-tbl').innerHTML=
-    '<thead><tr><th>#</th><th>Cod. Cliente</th><th>Ultimo acquisto</th>'+
-    '<th>Recenza (gg)</th><th>Frequenza</th><th>Monetizzazione</th>'+
+    '<thead><tr><th>#</th><th>Cliente</th><th>Ultimo acquisto</th>'+
+    '<th>Recenza (gg)</th><th>Scontrini</th><th>Spesa totale</th>'+
     '<th>R (1–10)</th><th>F (1–10)</th><th>M (1–10)</th></tr></thead><tbody>'+
     rows.map((r,i)=>`<tr>
-      <td class="row-n">${i+1}</td><td class="cod">${r.cod}</td><td>${r.data}</td>
-      <td>${r.rec}</td><td>${r.freq}</td>
+      <td class="row-n">${i+1}</td>
+      <td class="cod">${r.cod==='Anonimo'?'<span class="tag tag-anon">Anonimo</span>':r.cod}</td>
+      <td>${r.data}</td><td>${r.rec}</td><td>${r.freq}</td>
       <td class="mon">€${r.mon.toLocaleString('it-IT',{minimumFractionDigits:2})}</td>
       <td><span class="score sr">${r.R}</span></td>
       <td><span class="score sf">${r.F}</span></td>
@@ -546,37 +563,14 @@ function renderRFM() {
     </tr>`).join('')+'</tbody>';
 }
 
-// ═══════════════════════════════════════════════════════════════
-// SCONTRINI
-// ═══════════════════════════════════════════════════════════════
 function renderScontrini() {
   const q=(document.getElementById('scontrini-search').value||'').toLowerCase();
-  const COLS=['NUM.','DATA','NUM.MF','CLI.','SC.','BUO.UTIL.','TOT.','COD. DB NAZ.','CLIENTE','CASSIERE','COD.ART.','DESCRIZIONE','QTA','PREZZO','MOV.'];
-  let rows=STORICO_DATA.filter(r=>{
-    const d=parseDate(r['DATA']||r['data']||'');
-    return d ? inRange(d) : true;
-  });
-  if(q) rows=rows.filter(r=>Object.values(r).some(v=>String(v).toLowerCase().includes(q)));
-  document.getElementById('scontrini-info').textContent=`${rows.length} scontrini nel periodo`;
-  const visibleCols=COLS.filter(c=>rows.some(r=>String(r[c]||'').trim()));
+  let rows=SCONTRINI.filter(r=>inRange(r.data));
+  if(q) rows=rows.filter(r=>
+    (r.cliente||'').toLowerCase().includes(q)||
+    (r.desc||'').toLowerCase().includes(q)||
+    (r.cassiere||'').toLowerCase().includes(q)
+  );
+  scontriniCache=rows;
+  document.getElementById('scontrini-info').textContent=`${rows.length} righe nel periodo`;
   document.getElementById('scontrini-tbl').innerHTML=
-    '<thead><tr><th>#</th>'+visibleCols.map(c=>`<th>${c}</th>`).join('')+'</tr></thead><tbody>'+
-    rows.map((r,i)=>`<tr><td class="row-n">${i+1}</td>`+
-      visibleCols.map(c=>{
-        const v=String(r[c]||'');
-        let cell=v;
-        if(c==='MOV.'){cell=v==='-'?'<span class="tag tag-v">✓ Vendita</span>':v==='+'?'<span class="tag tag-r">↩ Reso</span>':`<span class="tag tag-n">${v}</span>`;}
-        if(c==='TOT.'){const n=parseFloat(v.replace(',','.'));if(!isNaN(n))cell=`<b>€${Math.abs(n).toFixed(2)}</b>`;}
-        return `<td>${cell}</td>`;
-      }).join('')+'</tr>'
-    ).join('')+'</tbody>';
-}
-
-// ═══════════════════════════════════════════════════════════════
-// BOOT
-// ═══════════════════════════════════════════════════════════════
-setSyncStatus('loading','Connessione...');
-loadAllData();
-</script>
-</body>
-</html>
